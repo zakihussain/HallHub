@@ -1,0 +1,20 @@
+.gallery-view-all { margin-top: 12px; }
+.unavailable-note { color: #9e4446; }
+.package-intro { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px; border: 1px solid rgba(201,162,74,.55); border-radius: 16px; background: #fffaf0; }
+.detail-section.package-intro { margin-top: 42px; }
+.package-intro h2 { margin-bottom: 8px; }
+.package-intro p { margin: 0; max-width: 600px; }
+.booked-schedule { margin: 20px 0 18px; padding: 16px; border: 1px solid rgba(90,23,37,.12); border-radius: 12px; background: #fffaf0; }
+.booked-schedule-head { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
+.booked-schedule-head strong { display: block; margin-top: 5px; color: var(--maroon); font-size: .92rem; }
+.booked-schedule-head > span { padding: 5px 8px; border-radius: 999px; color: var(--maroon); background: #f5e8cf; font-size: .64rem; font-weight: 700; white-space: nowrap; }
+.booked-schedule p { margin: 11px 0 13px; color: var(--muted); font-size: .7rem; }
+.booked-schedule-list { display: grid; gap: 7px; }
+.booked-slot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 9px; border: 1px solid rgba(90,23,37,.1); border-radius: 8px; background: var(--white); color: var(--muted); font-size: .67rem; }
+.booked-slot span { display: inline-flex; align-items: center; gap: 6px; }
+.booked-slot svg { width: 13px; color: #a34c4e; }
+.booked-slot strong { color: var(--maroon); font-size: .65rem; white-space: nowrap; }
+.review-overview { display: flex; align-items: center; gap: 25px; margin: 24px 0; }
+.review-overview > strong { color: var(--maroon); font-family: 'Playfair Display', serif; font-size: 3.1rem; }
+.review-overview .muted { font-size: .75rem; }
+@media (max-width: 760px) { .detail-section.package-intro { margin-top: 30px; } .package-intro { align-items: start; flex-direction: column; } .booked-schedule-head { align-items: flex-start; flex-direction: column; } }

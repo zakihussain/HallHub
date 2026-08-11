@@ -1,0 +1,9 @@
+.admin-login-page .login-form { min-height: 520px; }
+.password-field { position: relative; }
+.password-field .field-control { padding-right: 52px; }
+.password-toggle { position: absolute; top: 30px; right: 7px; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 8px; color: var(--muted); background: transparent; }
+.password-toggle:hover, .password-toggle:focus-visible { color: var(--maroon); background: var(--soft); outline: none; }
+.password-toggle svg { width: 18px; height: 18px; }
+.login-back-wrap { margin-top: 26px; text-align: center; }
+.login-back-link { color: var(--maroon); font-size: .78rem; }
+.login-back-link svg { width: 15px; height: 15px; }

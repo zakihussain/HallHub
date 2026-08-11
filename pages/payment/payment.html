@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Checkout — HallHub</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+</head>
+<body data-page="customer">
+  <div data-site-nav></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../index.html">Home</a><span>·</span><a href="../booking/booking.html">Booking</a><span>·</span><span>Payment</span></div>
+        <div class="eyebrow" style="margin-top:20px">Secure checkout</div>
+        <h1>One last step.</h1>
+        <p>Review your package and choose how you’d like to complete this demo payment.</p>
+      </div>
+    </section>
+    <section class="container booking-page">
+      <div class="booking-layout">
+        <section class="form-panel">
+          <h2>Payment method</h2>
+          <p>Your details are protected. This prototype simulates the payment and never stores real card information.</p>
+          <div class="payment-methods">
+            <label class="payment-method active"><input type="radio" name="payment" value="card" checked><i data-lucide="credit-card"></i><span>Credit / debit card</span></label>
+            <label class="payment-method"><input type="radio" name="payment" value="bank"><i data-lucide="landmark"></i><span>Bank transfer</span></label>
+            <label class="payment-method"><input type="radio" name="payment" value="wallet"><i data-lucide="smartphone"></i><span>Mobile wallet</span></label>
+            <label class="payment-method"><input type="radio" name="payment" value="cash"><i data-lucide="hand-coins"></i><span>Cash / pay at venue</span></label>
+          </div>
+          <div id="cardForm">
+            <fieldset class="card-brands">
+              <legend>Choose card network</legend>
+              <div class="card-brand-options" id="cardBrands" role="radiogroup" aria-label="Card network">
+                <label class="card-brand active"><input type="radio" name="cardBrand" value="visa" checked><span class="card-brand-mark visa">VISA</span><span><strong>Visa</strong><small>Credit or debit</small></span></label>
+                <label class="card-brand"><input type="radio" name="cardBrand" value="mastercard"><span class="card-brand-mark mastercard"><i></i><i></i></span><span><strong>Mastercard</strong><small>Credit or debit</small></span></label>
+              </div>
+            </fieldset>
+            <div class="form-grid">
+              <div class="field full"><label for="cardholder">Cardholder name</label><input id="cardholder" class="field-control" placeholder="Name on card"></div>
+              <div class="field full"><label for="cardNumber">Card number</label><input id="cardNumber" class="field-control" inputmode="numeric" placeholder="•••• •••• •••• ••••"></div>
+              <div class="field"><label for="expiry">Expiry</label><input id="expiry" class="field-control" placeholder="MM / YY"></div>
+              <div class="field"><label for="cvv">CVV</label><input id="cvv" class="field-control" type="password" placeholder="•••"></div>
+              <div class="field full"><label for="billingEmail">Billing email</label><input id="billingEmail" class="field-control" type="email" placeholder="you@example.com"></div>
+            </div>
+          </div>
+          <div class="secure-note" style="margin-top:22px"><i data-lucide="lock-keyhole"></i><span>Secure checkout · Demo mode · No real charge will be made</span></div>
+          <button class="btn btn-primary" id="payNow" style="width:100%;margin-top:24px">Pay now <i data-lucide="arrow-right"></i></button>
+        </section>
+        <aside class="summary-card" id="paymentSummary"></aside>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <div class="modal" id="processing"><div class="modal-card" style="text-align:center;padding:40px"><div class="success-icon" style="margin-bottom:18px;background:var(--maroon)"><i data-lucide="loader-circle" class="spin"></i></div><h3>Processing your payment…</h3><p class="muted" style="margin:0;font-size:.82rem">Securing your booking and preparing your confirmation.</p></div></div>
+  <script src="../../data/halls.js"></script>
+  <script src="../../data/services.js"></script>
+  <script src="../../assets/js/app.js"></script>
+  <script src="../../assets/js/payment.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Hall — HallHub</title>
+  <link rel="stylesheet" href="../../assets/css/base.css?v=find-filters-3">
+</head>
+<body data-page="customer" data-active="find">
+  <div data-site-nav></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumbs"><a href="../../index.html">Home</a><span>·</span><span>Find a Hall</span></div>
+        <h1>Find your perfect hall.</h1>
+        <p>Compare venues by location, capacity, budget and the facilities that turn a space into your place.</p>
+      </div>
+    </section>
+    <section class="container marketplace" id="marketplace">
+      <aside class="filter-panel" id="filterPanel">
+        <div class="filter-header">
+          <h3>Filters</h3>
+          <button class="icon-btn" id="closeFilters" aria-label="Close filters"><i data-lucide="x"></i></button>
+        </div>
+        <div class="filter-section">
+          <h4>Location</h4>
+          <select class="field-control" id="filterCity">
+            <option value="">All cities</option><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Rawalpindi</option><option>Faisalabad</option><option>Bhurban</option>
+          </select>
+        </div>
+        <div class="filter-section">
+          <h4>Event</h4>
+          <select class="field-control" id="filterEvent">
+            <option value="">Any event</option><option value="Wedding">Wedding</option><option value="Walima">Walima</option><option value="Mehndi">Mehndi</option><option value="Nikkah">Nikkah</option><option value="Birthday">Birthday</option>
+          </select>
+          <small class="muted" style="display:block;margin-top:7px;font-size:.68rem">Every listed venue can host these celebrations.</small>
+        </div>
+        <div class="filter-section">
+          <h4>Guest capacity</h4>
+          <select class="field-control" id="guestCapacity">
+            <option value="">Any size</option><option value="300">100–300 guests</option><option value="500">300–500 guests</option><option value="1000">500–1,000 guests</option><option value="1500">1,000+ guests</option>
+          </select>
+        </div>
+        <div class="filter-section">
+          <h4>Budget per guest</h4>
+          <select class="field-control" id="budgetRange">
+            <option value="">Any budget</option><option value="0-3000">Under PKR 3,000</option><option value="3000-4000">PKR 3,000–4,000</option><option value="4000-5000">PKR 4,000–5,000</option><option value="5000-999999">PKR 5,000+</option>
+          </select>
+        </div>
+        <div class="filter-section">
+          <h4>Venue type</h4>
+          <select class="field-control" id="filterType">
+            <option value="">All types</option><option>Indoor</option><option>Outdoor</option><option>Indoor & Outdoor</option><option>Banquet</option><option>Marquee</option><option>Ballroom</option><option>Lawn</option>
+          </select>
+        </div>
+        <div class="filter-section">
+          <h4>Facilities</h4>
+          <div class="check-list">
+            <label><input type="checkbox" value="Air Conditioning" data-facility> Air conditioning</label>
+            <label><input type="checkbox" value="Parking" data-facility> Parking</label>
+            <label><input type="checkbox" value="Generator" data-facility> Generator backup</label>
+            <label><input type="checkbox" value="Bridal Room" data-facility> Bridal room</label>
+            <label><input type="checkbox" value="Catering" data-facility> Catering</label>
+            <label><input type="checkbox" value="Decoration" data-facility> Decoration</label>
+          </div>
+        </div>
+        <div class="filter-section">
+          <h4>Minimum rating</h4>
+          <select class="field-control" id="filterRating"><option value="">Any rating</option><option value="4.5">4.5+</option><option value="4">4+</option><option value="3.5">3.5+</option></select>
+        </div>
+        <div class="filter-section">
+          <h4>Event date</h4>
+          <input class="field-control" id="eventDate" type="date">
+          <small class="muted" style="display:block;margin-top:7px;font-size:.68rem">We’ll show availability during booking.</small>
+        </div>
+        <button class="btn btn-primary" style="width:100%" id="applyFilters">Apply filters</button>
+      </aside>
+      <section>
+        <div class="results-toolbar">
+          <div><strong id="resultCount">18 venues found</strong><span class="muted" style="display:block;font-size:.78rem;margin-top:3px">Curated spaces across Pakistan</span></div>
+          <div class="toolbar-actions">
+            <button class="btn btn-ghost btn-sm mobile-filter-btn" id="openFilters" aria-expanded="true"><i data-lucide="sliders-horizontal"></i> Filters</button>
+            <label for="sortBy">Sort by</label>
+            <select id="sortBy"><option value="recommended">Recommended</option><option value="price-low">Price low to high</option><option value="price-high">Price high to low</option><option value="rating">Highest rated</option><option value="capacity">Capacity</option></select>
+          </div>
+        </div>
+        <div class="filter-notice" id="filterNotice" role="status" hidden></div>
+        <div class="grid hall-grid" id="hallResults"></div>
+        <div class="no-results" id="noResults" style="display:none">
+          <i data-lucide="search-x" style="color:var(--gold);width:36px;height:36px;margin-bottom:17px"></i>
+          <h3>No venues match your search</h3>
+          <p>Try increasing your budget, changing the location or selecting a different guest capacity.</p>
+          <button class="btn btn-primary" id="resetFilters">Reset filters</button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="../../data/halls.js?v=find-filters-3"></script>
+  <script src="../../assets/js/app.js?v=find-filters-3"></script>
+  <script src="../../assets/js/find-hall.js?v=find-filters-3"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

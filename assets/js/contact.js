@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelector('#contactForm')?.addEventListener('submit',e=>{e.preventDefault();e.target.reset();HallHub.showToast('Message sent — we’ll be in touch shortly.')})});

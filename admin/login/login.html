@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HallHub Administration</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="admin-login-page" data-page="admin">
+  <main class="login-shell">
+    <section class="login-brand">
+      <a class="brand" href="../../index.html"><span class="brand-mark">H</span><span>HALLHUB<small>Your Day. Your Hall. Your Way.</small></span></a>
+      <div><h1>Make every celebration run beautifully.</h1><p>HallHub Administration gives your team a clear view of venues, bookings and the people behind every date.</p></div>
+    </section>
+    <section class="login-form">
+      <div class="eyebrow">HallHub administration</div>
+      <h2>Welcome back.</h2>
+      <p>Sign in to manage your venue marketplace.</p>
+      <form id="adminLogin">
+        <div class="field"><label for="adminEmail">Email address</label><input class="field-control" id="adminEmail" type="email" value="admin@hallhub.pk" required></div>
+        <div class="field password-field"><label for="adminPassword">Password</label><input class="field-control" id="adminPassword" type="password" value="hallhub2026" required><button class="password-toggle" id="toggleAdminPassword" type="button" aria-label="Show password" aria-pressed="false"><i data-lucide="eye"></i></button></div>
+        <div class="check-row"><label><input type="checkbox" checked> Remember me</label><a href="#" data-toast="Please contact your account owner to reset your password.">Forgot password?</a></div>
+        <button class="btn btn-primary" type="submit">Sign in <i data-lucide="arrow-right"></i></button>
+      </form>
+      <div class="demo-note"><strong>Demo access</strong><br>admin@hallhub.pk · hallhub2026</div>
+      <div class="login-back-wrap"><a class="btn btn-ghost btn-sm login-back-link" href="../../index.html"><i data-lucide="arrow-left"></i> Return to customer site</a></div>
+    </section>
+  </main>
+  <script src="../../assets/js/app.js"></script>
+  <script src="../../assets/js/admin-login.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</body>
+</html>

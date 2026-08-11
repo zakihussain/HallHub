@@ -1,0 +1,28 @@
+.booking-page .form-panel { min-height: 590px; }
+.booking-page .progress-step:last-child { color: var(--maroon); }
+.booking-page .invoice-panel { border: 0; background: transparent; }
+.booking-page .invoice-panel .summary-item { align-items: center; min-height: 52px; margin-bottom: 10px; padding: 13px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); }
+.booking-page .invoice-panel .summary-item strong { max-width: 65%; text-align: right; }
+.booking-page .invoice-panel .summary-total { align-items: center; margin-top: 4px; padding: 17px 16px; border: 1px solid rgba(90,23,37,.2); border-radius: 12px; background: #fffaf0; }
+.booking-availability { margin-top: 26px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #fffaf0; }
+.booking-availability-head { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
+.booking-availability-head h3 { margin: 5px 0 0; color: var(--maroon); font-size: 1.15rem; }
+.booking-availability-head > span { padding: 6px 9px; border-radius: 999px; color: var(--maroon); background: #f5e8cf; font-size: .68rem; font-weight: 700; white-space: nowrap; }
+.booking-availability > p { margin: 13px 0 16px; font-size: .78rem; }
+.booking-slot-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.booking-slot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 11px; border: 1px solid rgba(90,23,37,.12); border-radius: 9px; background: var(--white); color: var(--muted); font-size: .72rem; }
+.booking-slot span { display: inline-flex; align-items: center; gap: 6px; }
+.booking-slot svg { width: 14px; color: #a34c4e; }
+.booking-slot strong { color: var(--maroon); font-size: .7rem; white-space: nowrap; }
+.date-status { display: flex; align-items: center; gap: 8px; min-height: 24px; margin-top: 10px; color: var(--muted); font-size: .73rem; }
+.date-status svg { width: 16px; flex: 0 0 auto; }
+.date-status strong { color: inherit; }
+.date-status.available { color: var(--success); }
+.date-status.unavailable { color: #a34c4e; }
+@media (max-width: 760px) {
+  .booking-page .invoice-panel .summary-item { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .booking-page .invoice-panel .summary-item strong { max-width: 100%; text-align: left; }
+  .booking-page .invoice-panel .summary-total { gap: 8px; }
+  .booking-availability-head { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .booking-slot-list { grid-template-columns: 1fr; }
+}
