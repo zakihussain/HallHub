@@ -290,3 +290,31 @@ window.HALLS = window.HALLS.map((hall, index) => {
   const gallery = venue.gallery.slice();
   return { ...hall, ...venue, image: gallery[0], gallery, images: gallery, location: venue.address, mapsQuery: venue.address, verified: true };
 });
+
+// Keep venue photography inside the deployment so cards and galleries do not
+// depend on third-party hotlink permissions or image hosts staying online.
+const localHallImageMap = {
+  'avari-lahore': ['/assets/images/halls/avari-lahore/photo-1.jpg', '/assets/images/halls/avari-lahore/photo-2.jpg', '/assets/images/halls/avari-lahore/photo-3.jpg', '/assets/images/halls/avari-lahore/photo-4.jpg'],
+  'avior-islamabad': ['/assets/images/halls/avior-islamabad/photo-1.webp', '/assets/images/halls/avior-islamabad/photo-2.webp', '/assets/images/halls/avior-islamabad/photo-3.webp', '/assets/images/halls/avior-islamabad/photo-4.webp'],
+  'falettis-lahore': ['/assets/images/halls/falettis-lahore/photo-1.jpg', '/assets/images/halls/falettis-lahore/photo-2.jpg', '/assets/images/halls/falettis-lahore/photo-3.jpg', '/assets/images/halls/falettis-lahore/photo-4.jpg'],
+  'karachi-marriott': ['/assets/images/halls/karachi-marriott/photo-1.jpg', '/assets/images/halls/karachi-marriott/photo-2.jpg', '/assets/images/halls/karachi-marriott/photo-3.jpg', '/assets/images/halls/karachi-marriott/photo-4.jpg'],
+  'marriott-islamabad': ['/assets/images/halls/marriott-islamabad/photo-1.jpg', '/assets/images/halls/marriott-islamabad/photo-2.jpg', '/assets/images/halls/marriott-islamabad/photo-3.jpg', '/assets/images/halls/marriott-islamabad/photo-4.jpg', '/assets/images/halls/marriott-islamabad/photo-5.jpg'],
+  'movenpick-karachi': ['/assets/images/halls/movenpick-karachi/photo-1.jpg', '/assets/images/halls/movenpick-karachi/photo-2.jpg', '/assets/images/halls/movenpick-karachi/photo-3.jpg', '/assets/images/halls/movenpick-karachi/photo-4.jpg'],
+  'pavilion-islamabad': ['/assets/images/halls/pavilion-islamabad/photo-1.jpg', '/assets/images/halls/pavilion-islamabad/photo-2.jpg', '/assets/images/halls/pavilion-islamabad/photo-3.jpg', '/assets/images/halls/pavilion-islamabad/photo-4.jpg', '/assets/images/halls/pavilion-islamabad/photo-5.jpg', '/assets/images/halls/pavilion-islamabad/photo-6.jpg'],
+  'pc-bhurban': ['/assets/images/halls/pc-bhurban/photo-1.jpg', '/assets/images/halls/pc-bhurban/photo-2.jpg', '/assets/images/halls/pc-bhurban/photo-3.jpg', '/assets/images/halls/pc-bhurban/photo-4.jpg'],
+  'pc-lahore': ['/assets/images/halls/pc-lahore/photo-1.png', '/assets/images/halls/pc-lahore/photo-2.png', '/assets/images/halls/pc-lahore/photo-3.png', '/assets/images/halls/pc-lahore/photo-4.png', '/assets/images/halls/pc-lahore/photo-5.png'],
+  'pc-rawalpindi': ['/assets/images/halls/pc-rawalpindi/photo-1.png', '/assets/images/halls/pc-rawalpindi/photo-2.jpg', '/assets/images/halls/pc-rawalpindi/photo-3.jpg', '/assets/images/halls/pc-rawalpindi/photo-4.jpg'],
+  'ramada-islamabad': ['/assets/images/halls/ramada-islamabad/photo-1.jpg', '/assets/images/halls/ramada-islamabad/photo-2.jpg', '/assets/images/halls/ramada-islamabad/photo-3.png', '/assets/images/halls/ramada-islamabad/photo-4.jpg'],
+  'ramada-lahore': ['/assets/images/halls/ramada-lahore/photo-1.jpg', '/assets/images/halls/ramada-lahore/photo-2.jpg', '/assets/images/halls/ramada-lahore/photo-3.jpg', '/assets/images/halls/ramada-lahore/photo-4.jpg'],
+  'royal-pearl': ['/assets/images/halls/royal-pearl/photo-1.png', '/assets/images/halls/royal-pearl/photo-2.png', '/assets/images/halls/royal-pearl/photo-3.png', '/assets/images/halls/royal-pearl/photo-4.png', '/assets/images/halls/royal-pearl/photo-5.png'],
+  'serena-faisalabad': ['/assets/images/halls/serena-faisalabad/photo-1.jpg', '/assets/images/halls/serena-faisalabad/photo-2.jpg', '/assets/images/halls/serena-faisalabad/photo-3.jpg', '/assets/images/halls/serena-faisalabad/photo-4.jpg'],
+  'serena-islamabad': ['/assets/images/halls/serena-islamabad/photo-1.jpg', '/assets/images/halls/serena-islamabad/photo-2.jpg', '/assets/images/halls/serena-islamabad/photo-3.jpg', '/assets/images/halls/serena-islamabad/photo-4.jpg'],
+  'the-grand-karachi': ['/assets/images/halls/the-grand-karachi/photo-1.jpg', '/assets/images/halls/the-grand-karachi/photo-2.jpg', '/assets/images/halls/the-grand-karachi/photo-3.jpg', '/assets/images/halls/the-grand-karachi/photo-4.png', '/assets/images/halls/the-grand-karachi/photo-5.png'],
+  'the-mark-islamabad': ['/assets/images/halls/the-mark-islamabad/photo-1.webp', '/assets/images/halls/the-mark-islamabad/photo-2.jpg', '/assets/images/halls/the-mark-islamabad/photo-3.jpg', '/assets/images/halls/the-mark-islamabad/photo-4.jpg'],
+  'the-nouvelle-islamabad': ['/assets/images/halls/the-nouvelle-islamabad/photo-1.webp', '/assets/images/halls/the-nouvelle-islamabad/photo-2.webp', '/assets/images/halls/the-nouvelle-islamabad/photo-3.webp', '/assets/images/halls/the-nouvelle-islamabad/photo-4.webp']
+};
+
+window.HALLS = window.HALLS.map(hall => {
+  const gallery = localHallImageMap[hall.id];
+  return gallery ? { ...hall, image: gallery[0], gallery, images: gallery } : hall;
+});
