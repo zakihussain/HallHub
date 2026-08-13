@@ -89,6 +89,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1
 .hero .field label { display: none; }
 .field-control { width: 100%; min-height: 47px; padding: 0 13px; border: 1px solid var(--line); border-radius: 9px; outline: none; color: var(--ink); background: var(--white); }
 .field-control:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,74,.18); }
+.field-help { color: var(--muted); font-size: .68rem; line-height: 1.35; }
+.field-error { color: #a34c4e; font-size: .7rem; line-height: 1.35; }
+.field.has-error .field-control { border-color: #b75b5e; box-shadow: 0 0 0 3px rgba(183,91,94,.12); }
+.field.has-error label { color: #a34c4e; }
 .hero .field-control { border: 0; }
 .search-panel .btn { min-height: 47px; border-radius: 10px; }
 .trust-row { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 28px; color: rgba(255,255,255,.75); font-size: .82rem; }
