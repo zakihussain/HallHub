@@ -133,19 +133,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1
 .service-card img { width: 100%; height: 270px; object-fit: cover; }
 .service-card-body { padding: 24px; }
 .about-preview { background: var(--ivory); }
-.about-preview-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 70px; align-items: center; }
+.about-preview-grid { max-width: 800px; }
 .about-preview h2 { margin: 10px 0 16px; font-size: clamp(2rem, 4vw, 3.2rem); }
 .about-preview p { color: var(--muted); }
-.founder-preview { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.founder-card { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
-.founder-avatar { display: grid; place-items: center; height: 240px; color: var(--light-gold); background: linear-gradient(135deg, var(--maroon), var(--burgundy)); font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 600; letter-spacing: .04em; }
-.founder-avatar-image { overflow: hidden; padding: 0; }
-.founder-avatar-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.founder-avatar-zain img { object-position: 50% 37%; }
-.founder-avatar-talha img { object-position: 50% 24%; }
-.founder-card > div:last-child { padding: 16px; }
-.founder-card strong { display: block; margin-top: 4px; color: var(--maroon); font-family: 'Playfair Display', serif; font-size: 1.35rem; }
-.founder-card p { margin: 3px 0 0; font-size: .78rem; }
 .service-card h3 { margin-bottom: 8px; font-size: 1.6rem; }
 .service-card p { margin-bottom: 16px; color: var(--muted); font-size: .9rem; }
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }

@@ -17,14 +17,4 @@
 .vision-card h3 { margin: 12px 0 12px; font-size: 1.8rem; }
 .vision-card p { margin: 0; color: var(--muted); }
 .vision-card-dark p { color: #ddcfd0; }
-.founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.founder-profile { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
-.founder-portrait { overflow: hidden; width: 100%; aspect-ratio: 4 / 5; background: var(--cream); }
-.founder-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.founder-portrait-zain img { object-position: 50% 37%; }
-.founder-portrait-talha img { object-position: 50% 24%; }
-.founder-profile-body { padding: 25px; }
-.founder-profile h3 { margin: 8px 0; font-size: 2.1rem; }
-.founder-profile p { color: var(--muted); }
-.founder-quote { margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--maroon); font-family: 'Playfair Display', serif; font-size: 1.05rem; }
-@media (max-width: 760px) { .about-story-grid, .vision-grid, .founder-grid { grid-template-columns: 1fr; gap: 30px; } .about-image-stack img { height: 290px; } .founder-portrait { aspect-ratio: 4 / 5; } }
+@media (max-width: 760px) { .about-story-grid, .vision-grid { grid-template-columns: 1fr; gap: 30px; } .about-image-stack img { height: 290px; } }
